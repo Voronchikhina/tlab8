@@ -1,0 +1,58 @@
+language: cpp
+
+compiler:
+    - clang
+    - gcc
+
+git:
+    depth: 1
+
+tags: true
+
+sudo: true
+
+addons:
+    apt:
+         sources:
+          - ubuntu-toolchain-r-test
+          - llvm-toolchain-precise-3.7
+         packages:
+          - cmake
+          - cmake-data
+          - clang-3.7
+          - g++-7
+
+script:
+- cd hello_world_application
+- cmake -H. -B_build
+- cmake --build _build
+- cmake --build _build --target hello_world
+- ./_build/hello_world
+- echo "Hello world application testing is done"
+- cd ..
+- cd solver_application
+- cmake -H. -B_build
+- cmake --build _build
+- cmake --build _build --target solver
+- cmake --build _build --target package_source
+- cd _build
+- if [ "" = "osx" ]; then cpack -G DragNDrop  ;fi
+- if [ "" = "linux" ]; then cpack -G DEB  ;fi
+#- if [ "" = "linux" ]; then cpack -G RPM  ;fi
+deploy:
+    provider: releases
+
+    api_key: 
+    
+    file_glob: true
+    file:
+      - solver_application/_build/solver-source-files.zip
+      - solver_application/_build/solver-source-files.tar.gz
+      - if [ "" = "osx" ]; then 'solver_application/_build/solver.dmg'  ;fi
+ #     - if [ "" = "linux" ]; then 'solver_application/_build/solver.rpm'  ;fi
+      - if [ "" = "linux" ]; then 'solver_application/_build/solver.deb'  ;fi
+    
+    skip_cleanup: true
+    
+    on:
+        tags: true
