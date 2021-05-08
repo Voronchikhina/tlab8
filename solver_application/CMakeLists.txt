@@ -9,7 +9,7 @@ add_executable(solver equation.cpp)
 
 include_directories(../formatter_ex_lib ../solver_lib)
 install(TARGETS solver DESTINATION bin)
-include(CPackConfig.cmake) 
+include(PackConfig.cmake) 
 include(CPackSourceConfig.cmake)
 
 add_subdirectory(../formatter_ex_lib formatter_ex)
