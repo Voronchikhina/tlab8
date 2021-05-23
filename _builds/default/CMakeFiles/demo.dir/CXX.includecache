@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../../include/print.hpp
+fstream
+-
+iostream
+-
+string
+-
+
+/home/ubuntu/timplab7/lab6/demo/main.cpp
+print.hpp
+-
+cstdlib
+-
+

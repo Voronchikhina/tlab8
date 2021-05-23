@@ -1,0 +1,14 @@
+Execute command: [
+  `which`
+  `cmake`
+]
+[/home/ubuntu/timplab7/lab6]> "which" "cmake"
+/usr/bin/cmake
+Execute command: [
+  `cmake`
+  `--version`
+]
+[/home/ubuntu/timplab7/lab6]> "cmake" "--version"
+cmake version 3.16.3
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake).
