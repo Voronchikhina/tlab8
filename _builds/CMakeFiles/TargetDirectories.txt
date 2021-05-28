@@ -1,0 +1,7 @@
+/home/ubuntu/timplab7/lab6/_builds/CMakeFiles/install/strip.dir
+/home/ubuntu/timplab7/lab6/_builds/CMakeFiles/install/local.dir
+/home/ubuntu/timplab7/lab6/_builds/CMakeFiles/install.dir
+/home/ubuntu/timplab7/lab6/_builds/CMakeFiles/list_install_components.dir
+/home/ubuntu/timplab7/lab6/_builds/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/timplab7/lab6/_builds/CMakeFiles/edit_cache.dir
+/home/ubuntu/timplab7/lab6/_builds/CMakeFiles/print.dir

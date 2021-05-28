@@ -1,0 +1,1 @@
+"cmake" "-H." "-B/home/ubuntu/timplab7/lab6/_builds/default" "-DCMAKE_TOOLCHAIN_FILE=/home/ubuntu/timplab7/lab6/tools/polly/default.cmake"
